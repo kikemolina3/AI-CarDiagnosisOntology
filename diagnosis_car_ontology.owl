@@ -1,0 +1,829 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasProblem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasProblem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCauseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCauseOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isFixedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isFixedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isFixedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isFixedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isPropertyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Client"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#paidsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#paidsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Client"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#worksIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#worksIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#dateOfManifest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#dateOfManifest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasBusinessName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasBusinessName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasName"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasChasisNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasChasisNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasIdentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasPersonName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasPersonName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasName"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Client"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasPlateNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasPlateNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasRepairPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasRepairPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasSalary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasSalary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isSeriouslyDangerous -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isSeriouslyDangerous">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#AdmissionFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#AdmissionFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#CombustionFailure"/>
+        <rdfs:label xml:lang="es">FalloDeAdmisión</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BadSmell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BadSmell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:label xml:lang="es">MalOlor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BrakeFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BrakeFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:label xml:lang="es">FalloDeFrenos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Cleaner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Cleaner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <rdfs:label xml:lang="es">Limpiador</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Client -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Client">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#paidsTo"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:comment>Client class: represents one owner of vehicles, whose vehicles have got problems (failures) manifested as evidencies, solved in a mechanical workshop by operators.
+- the client pay the bill to mechanical workshop</rdfs:comment>
+        <rdfs:label xml:lang="es">Cliente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#CloseToFloor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#CloseToFloor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#SuspensionFailure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Class CloseToDoor:
+- close to door can only be produced by a suspension problem</rdfs:comment>
+        <rdfs:label xml:lang="es">CercanoAlSuelo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ClutchFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ClutchFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MotorFailure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCauseOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BadSmell"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStart"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Clutch class:
+- clutch problems can be the cause of some bad smell problems
+- clutch problems can be the cause of some start engine problems</rdfs:comment>
+        <rdfs:label xml:lang="es">FalloDeEmbrague</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#CombustionFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#CombustionFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectronicFailure"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MotorFailure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isSeriouslyDangerous"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="es">CombustionFailure class:
+- combustion failure is electronic failure at the same time is also motor failure
+- this failure is always a dangerous failure
+- is one of the causes that make vehicles can&apos;t start
+- to solve this problem is neccesary one professional mechanic at least</rdfs:label>
+        <rdfs:label xml:lang="es">FalloDeCombustión</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DeviatedDirection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DeviatedDirection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DirectionFailure"/>
+        <rdfs:label xml:lang="es">DirecciónDesviada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DifficultToStop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DifficultToStop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:label xml:lang="es">DificultadParaDetenerse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DifficultToTurnSteeringWheel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DifficultToTurnSteeringWheel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:label xml:lang="es">DificultadParaGirarElVolante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DirectionFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DirectionFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:label xml:lang="es">FalloDeDirección</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Dirt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Dirt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:label xml:lang="es">Suciedad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectricVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectricVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:label xml:lang="es">VehículoEléctrico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Electrician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Electrician">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <rdfs:label xml:lang="es">Electricista</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectronicFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectronicFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:label xml:lang="es">FalloElectrónico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#dateOfManifest"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:comment xml:lang="es">Class evidence: represent the symptom(s) can present vehicles, produced by failures.
+- each evidence has a unique date of manifest
+- a evidence is always produced by 1 or more problems in the vehicle</rdfs:comment>
+        <rdfs:label xml:lang="es">Evidencia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ExhaustFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ExhaustFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#CombustionFailure"/>
+        <rdfs:label xml:lang="es">FalloDeEscape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isFixedIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasRepairPrice"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:comment xml:lang="es">Failure class: problems that have got the vehicles, manifested as evidencies and solved by operators. 
+- each failure has its own price of repair
+- failures are always fixed in mechanical workshop</rdfs:comment>
+        <rdfs:label xml:lang="es">Fallo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#GasVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#GasVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:label xml:lang="es">VehículoGasolina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#InternshipMechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#InternshipMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Mechanic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasSalary"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">IntershipMechanic class:
+- each internship employee has the exactly 300$ salary</rdfs:comment>
+        <rdfs:label xml:lang="es">MecánicoEnPrácticas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Mechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Mechanic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <rdfs:label xml:lang="es">Mecánico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:comment xml:lang="es">MechanicalWorkshop class: the place where vehicles are fixed</rdfs:comment>
+        <rdfs:label xml:lang="es">TallerMecánico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MotorFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MotorFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCauseOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isFixedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ProfessionalMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">MotorFailure class:
+- is one of the causes that make vehicles can&apos;t start
+- to solve this problem is neccesary one professional mechanic at least</rdfs:comment>
+        <rdfs:label xml:lang="es">FalloDeMotor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Noise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Noise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MotorFailure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Noise class: 
+- noise can be produced sometimes by motor problems</rdfs:comment>
+        <rdfs:label xml:lang="es">Ruido</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotRightAdvance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotRightAdvance">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DeviatedDirection"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">NotRightAdvance: 
+- all evidencies caused by deviated direction are always not right advance.</rdfs:comment>
+        <rdfs:label xml:lang="es">NoAvanzaRecto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:label xml:lang="es">NoArranca</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStartAnything -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStartAnything">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectronicFailure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">NotStartAnything:
+- the problem because car doesn&apos;t start can be only electronic failure</rdfs:comment>
+        <rdfs:label xml:lang="es">NoArrancaNada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStartMotor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStartMotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#NotStart"/>
+        <rdfs:label xml:lang="es">NoArrancaMotor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#OilFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#OilFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MotorFailure"/>
+        <rdfs:label xml:lang="es">FalloDeAceite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasSalary"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasPersonName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle"/>
+        <rdfs:comment xml:lang="es">Operator class: the person or people who fix vehicle&apos;s problems
+- each operator has its own salary
+- each operator has exactly one name and surnames</rdfs:comment>
+        <rdfs:label xml:lang="es">Operario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#PowerLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#PowerLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Evidence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isCausedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#CombustionFailure"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectronicFailure"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">PowerLoss class: 
+- power loss only can be produced by two reasons: combustion failure OR electronic failure</rdfs:comment>
+        <rdfs:label xml:lang="es">PérdidaDePotencia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ProfessionalMechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ProfessionalMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Mechanic"/>
+        <rdfs:label xml:lang="es">MecánicoProfesional</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#StuckDirection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#StuckDirection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#DirectionFailure"/>
+        <rdfs:label xml:lang="es">DirecciónAtascada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#SuspensionFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#SuspensionFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Failure"/>
+        <rdfs:label xml:lang="es">FalloDeSuspensión</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Vehicle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#isPropertyOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Client"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Operator"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasChasisNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#hasPlateNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Vehicle class: vehicle(s) owned by clients, that have got problems fixed in...
+- one vehicle has unique chasis number
+- one vehicle can be plated (has one unique plate) or not (hasn&apos;t got plate)
+- vehicles are owned by people (clients or operators)</rdfs:comment>
+        <rdfs:label xml:lang="es">Vehículo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BadSmell3348DWF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BadSmell3348DWF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BadSmell"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ClutchFailure3348DWF"/>
+        <dateOfManifest>12/11/2020</dateOfManifest>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ClutchFailure3348DWF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ClutchFailure3348DWF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ClutchFailure"/>
+        <isCauseOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#BadSmell3348DWF"/>
+        <isFixedBy rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Rogelio"/>
+        <isFixedIn rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Paco&apos;s_Workshop"/>
+        <hasRepairPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">370</hasRepairPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#David -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#David">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Electrician"/>
+        <hasPersonName>David Paul Silva</hasPersonName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1760</hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Ricard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Ricard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Client"/>
+        <paidsTo rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Paco&apos;s_Workshop"/>
+        <hasPersonName>Nil Fernández Dalmau</hasPersonName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Rogelio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Rogelio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ProfessionalMechanic"/>
+        <hasPersonName>Rogelio Pérez Català</hasPersonName>
+        <hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1440</hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#1209LDC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#1209LDC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#ElectricVehicle"/>
+        <isPropertyOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Ricard"/>
+        <hasChasisNumber>324000FDLO11DSED440</hasChasisNumber>
+        <hasPlateNumber>1209LDC</hasPlateNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#3348DWF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#3348DWF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#GasVehicle"/>
+        <isPropertyOf rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Ricard"/>
+        <hasChasisNumber>345GFL090006VCVB1</hasChasisNumber>
+        <hasPlateNumber>3348DWF</hasPlateNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Paco&apos;s_Workshop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#Paco&apos;s_Workshop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/enrique/ontologies/2020/11/untitled-ontology-7#MechanicalWorkshop"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
